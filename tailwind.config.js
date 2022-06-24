@@ -10,6 +10,10 @@ module.exports = {
 				'gray-custom-1': '#EEEEEE',
 				'black-custom-1': '#333333',
 			},
+			boxShadow: {
+				'item-shadow':
+					' 10px 10px 20px #262C37, -10px -10px 20px rgba(72, 80, 99, 0.26)',
+			},
 		},
 	},
 	plugins: [],

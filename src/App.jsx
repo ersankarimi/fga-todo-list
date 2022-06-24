@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar } from './components'
+import { Navbar, Sidebar, ProjectManageForm, AddProject } from './components'
 import { useSidebar } from './hooks'
+import { Outlet } from 'react-router-dom'
 
 const App = () => {
 	const [sidebarIsOpen, toggleSidebar] = useSidebar()
@@ -20,14 +21,15 @@ const App = () => {
 
 	return (
 		<>
+			<AddProject />
 			<aside
-				className={`bg-white-custom-2 sticky top-0 z-50 h-screen min-w-[50%] max-w-[50%] md:min-w-[30%] md:max-w-[30%] lg:min-w-[15%] lg:max-w-[15%] ${
+				className={`bg-white-custom-2 sticky top-0 z-40 h-screen min-w-[60%] max-w-[60%] md:min-w-[35%] md:max-w-[35%] lg:min-w-[22%] lg:max-w-[22%] ${
 					sidebarIsOpen
 						? 'translate-x-0 block'
 						: '-translate-x-96 hidden'
 				}  ease-out duration-500 shadow-slate-300 shadow-lg`}
 			>
-				ASIDE
+				<Sidebar />
 			</aside>
 			<div id='content' className='flex flex-col min-h-screen'>
 				<header className='bg-red-custom-1 sticky top-0 z-30'>
@@ -35,8 +37,8 @@ const App = () => {
 						<Navbar />
 					</nav>
 				</header>
-				<main className='bg-white-100 relative h-full overflow-y-auto p-4 lg:py-4 lg:px-12'>
-					CONTENT
+				<main className='bg-white-100 relative h-full overflow-y-auto p-4 lg:py-4 lg:px-12 overflow-x-hidden'>
+					<Outlet />
 				</main>
 			</div>
 		</>
