@@ -14,14 +14,17 @@ const Sidebar = () => {
 	}, [sidebarIsOpen])
 
 	const handleShowHiddenSidebar = (e) => {
-		console.log(e.target.id)
+		console.log(e.target)
 		const { innerWidth } = window
 		innerWidth <= 767 &&
 			sidebarIsOpen &&
 			!e.target.id !== 'button-dropdown' &&
-			!e.target.id !== 'dropdown-arrow-icon' &&
-			!e.target.id !== 'edit-project-icon-svg' &&
-			!e.target.id !== 'edit-project-icon-path' &&
+			!e.target.classList.contains('dropdown-arrow-icon-svg') &&
+			!e.target.classList.contains('dropdown-arrow-icon-path') &&
+			!e.target.classList.contains('edit-project-icon-svg') &&
+			!e.target.classList.contains('edit-project-icon-path') &&
+			!e.target.textContent == 'Cancel' &&
+			!e.target.classList.contains('button-add-save') &&
 			toggleSidebar()
 	}
 

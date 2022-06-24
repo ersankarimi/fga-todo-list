@@ -73,14 +73,14 @@ const AddProject = () => {
 				<div className='flex max-w-[50%]'>
 					<button
 						type='button'
-						className='bg-white p-2 rounded-md appearance-none ring-1 ring-black-custom-1/50 hover:ring-black-custom-1/80 '
+						className='bg-white p-2 rounded-md appearance-none ring-1 ring-black-custom-1/50 hover:ring-black-custom-1/80 button-add-cancel-nah'
 						onClick={handleClickCancel}
 					>
 						Cancel
 					</button>
 					<button
 						type='button'
-						className='p-2 mx-4 bg-red-400 rounded-md disabled:bg-red-300 ring-1 ring-red-400 disabled:ring-red-300'
+						className='p-2 mx-4 bg-red-400 rounded-md disabled:bg-red-300 ring-1 ring-red-400 disabled:ring-red-300  button-add-save'
 						onClick={handleClickAdd}
 						disabled={!projectName && true}
 					>

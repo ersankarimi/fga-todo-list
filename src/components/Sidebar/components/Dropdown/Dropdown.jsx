@@ -66,10 +66,9 @@ const Dropdowns = () => {
 								viewBox='0 0 24 24'
 								fill='none'
 								xmlns='http://www.w3.org/2000/svg'
-								className={`${
+								className={`dropdown-arrow-icon-svg ${
 									dropdownIsOpen ? 'rotate-90' : 'rotate-0'
 								} ease-in duration-100`}
-								id='dropdown-arrow-icon'
 							>
 								<path
 									d='M9 5L16 12L9 19'
@@ -77,6 +76,7 @@ const Dropdowns = () => {
 									strokeWidth='2'
 									strokeLinecap='round'
 									strokeLinejoin='round'
+									className='dropdown-arrow-icon-path'
 								/>
 							</svg>
 							<span className='text-black-custom-1'>Project</span>
