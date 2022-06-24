@@ -104,7 +104,7 @@ const DetailProjectTodo = () => {
 						{todos.map((todo) => {
 							return (
 								<div
-									className='flex items-center w-[40%] sm:w-full lg:max-w-[50%] '
+									className='flex items-center mx-4'
 									key={todo.id}
 									onMouseEnter={() => {
 										document
@@ -123,7 +123,6 @@ const DetailProjectTodo = () => {
 								>
 									<input
 										type='checkbox'
-										className='sm:w-5 sm:h-5'
 										checked={todo.isComplete}
 										onChange={(e) =>
 											handleTodoIsComplete(
